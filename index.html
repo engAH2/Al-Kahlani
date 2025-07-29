@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -96,148 +96,240 @@
         .whatsapp-float:hover {
             background-color: #128c7e;
         }
+
+        /* إضافة استعلامات الوسائط للشاشات الصغيرة */
+        @media (max-width: 640px) {
+            /* تصغير قسم البطل (Hero) */
+            #home {
+                min-height: 80vh;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            
+            #home h1 {
+                font-size: 2.5rem;
+            }
+            
+            #home h2 {
+                font-size: 1.8rem;
+            }
+            
+            #home p {
+                font-size: 1.1rem;
+            }
+            
+            /* تصغير الأقسام الأخرى */
+            section {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+            
+            /* تصغير العناوين */
+            section h2 {
+                font-size: 2rem;
+            }
+            
+            /* تصغير حجم النصوص العامة */
+            body {
+                font-size: 0.9rem;
+            }
+            
+            /* تصغير أزرار التواصل */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            /* تعديلات للتنقل */
+            nav {
+                padding: 0.5rem 1rem;
+            }
+
+            /* تعديلات للبطاقات */
+            .bg-gray-50, .bg-white {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* تعديلات للشاشات المتوسطة */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            #home {
+                min-height: 90vh;
+            }
+        }
     </style>
 </head>
 <body class="font-arabic bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
 <!-- Navigation -->
+ <!-- Navigation -->
 <nav class="bg-white dark:bg-gray-800 shadow-lg fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <i class="fas fa-balance-scale text-gold text-2xl balance-scale ml-2"></i>
-                    <span class="text-xl font-bold text-blue-900 dark:text-blue-200">مجموعة الكحلاني</span>
-                </div>
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-reverse space-x-8">
-                <a href="#home" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">الرئيسية</a>
-                <a href="#about" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">عن المكتب</a>
-                <a href="#services" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">خدماتنا</a>
-                <a href="#blog" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">المدونة</a>
-                <a href="#testimonials" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">الشهادات</a>
-                <a href="#contact" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">اتصل بنا</a>
-                <a href="#faq" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">الأسئلة الشائعة</a>
-                <a href="#resources" class="nav-link text-blue-900 dark:text-blue-200 hover:text-primary transition-colors">الموارد</a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="text-blue-900 dark:text-blue-200 hover:text-primary focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <i class="fas fa-balance-scale text-gold text-2xl balance-scale ml-2"></i>
+          <span class="text-xl font-bold text-blue-900 dark:text-blue-200">مجموعة الكحلاني</span>
         </div>
-    </div>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#home" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">الرئيسية</a>
-            <a href="#about" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">عن المكتب</a>
-            <a href="#services" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">خدماتنا</a>
-            <a href="#blog" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">المدونة</a>
-            <a href="#testimonials" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">الشهادات</a>
-            <a href="#contact" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">اتصل بنا</a>
-            <a href="#faq" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">الأسئلة الشائعة</a>
-            <a href="#resources" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-primary">الموارد</a>
-        </div>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-reverse space-x-8">
+        <a href="#home" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">الرئيسية</a>
+        <a href="#about" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">عن المكتب</a>
+        <a href="#services" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">خدماتنا</a>
+        <a href="#blog" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">المدونة</a>
+        <a href="#testimonials" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">الشهادات</a>
+        <a href="#contact" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">اتصل بنا</a>
+        <a href="#faq" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">الأسئلة الشائعة</a>
+        <a href="#resources" class="nav-link text-blue-900 dark:text-blue-200 hover:text-gold transition-colors">الموارد</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button"
+          class="text-blue-900 dark:text-blue-200 hover:text-gold focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="#home" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">الرئيسية</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">عن المكتب</a>
+      <a href="#services" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">خدماتنا</a>
+      <a href="#blog" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">المدونة</a>
+      <a href="#testimonials" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">الشهادات</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">اتصل بنا</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">الأسئلة الشائعة</a>
+      <a href="#resources" class="mobile-nav-link block px-3 py-2 text-blue-900 dark:text-blue-200 hover:text-gold">الموارد</a>
+    </div>
+  </div>
 </nav>
 
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/967716216016?text=السلام عليكم اريد استفسر عن قضية متى يكون الوقت مناسب وشكرا مجموعة مكاتب الكحلاني للمحاماة" 
-       class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
-        <i class="fab fa-whatsapp" style="margin-top:16px"></i>
-    </a>
+ 
+<!-- Hero Section -->
+ <section id="home"
+  class="section block pt-20 pb-10 bg-[#0b1d4f] text-white min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] flex items-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="py-6">
 
- <!-- Hero Section -->
-<section id="home" class="pt-16 bg-[#0b1d4f] text-white min-h-screen flex items-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="py-20">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-3d">
-                مجموعة الكحلاني وشركاه
-            </h1>
-            <h2 class="text-2xl md:text-4xl font-semibold mb-8 text-3d">
-                للمحاماة والاستشارات القانونية
-            </h2>
-            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto">
-                نقدم أفضل الخدمات القانونية والاستشارات المهنية مع فريق من المحامين المتخصصين
-            </p>
-            
-            <!-- Lawyer Image -->
-    
-                <div class="mb-12">
-                    <div class="max-w-[200px] mx-auto bg-white/20 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
-                        <img src="img/presonal.jpg" class="w-full h-auto object-cover" alt="المستشار إبراهيم الكحلاني">
-                    </div>
-                    <p class="mt-4 text-lg font-semibold">المستشار إبراهيم الكحلاني</p>
-                    <p class="text-base">رئيس مجموعة مكاتب الكحلاني للمحاماة</p>
-                </div>
+      <h1 class="text-2xl md:text-4xl font-bold mb-3 text-3d">
+        مجموعة الكحلاني وشركاه
+      </h1>
+      <h2 class="text-lg md:text-2xl font-semibold mb-4 text-3d">
+        للمحاماة والاستشارات القانونية
+      </h2>
+      <p class="text-base md:text-lg mb-5 max-w-2xl mx-auto leading-relaxed">
+        نقدم أفضل الخدمات القانونية والاستشارات المهنية مع فريق من المحامين المتخصصين
+      </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-gold hover:bg-yellow-600 text-black px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                    تواصل معنا
-                </a>
-                <a href="#services" class="border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                    خدماتنا
-                </a>
-            </div>
+      <!-- Lawyer Image -->
+      <div class="mb-5">
+        <div class="max-w-[220px] mx-auto bg-white/20 rounded-xl overflow-hidden flex items-center justify-center shadow-md">
+          <img src="img/presonal.jpg" class="w-full h-auto object-cover" alt="المستشار إبراهيم الكحلاني">
         </div>
+        <p class="mt-3 text-base font-semibold">المستشار إبراهيم الكحلاني</p>
+        <p class="text-sm">رئيس مجموعة مكاتب الكحلاني للمحاماة</p>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact"
+          class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md transition-all w-full sm:w-auto">
+          تواصل معنا الآن
+        </a>
+        <a href="#services"
+          class="bg-white text-blue-900 hover:bg-blue-100 px-5 py-2 rounded-full text-sm font-semibold shadow-md transition-all w-full sm:w-auto">
+          استعرض خدماتنا
+        </a>
+      </div>
+
     </div>
+  </div>
 </section>
 
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-3d">عن المكتب</h2>
-                <div class="w-24 h-1 bg-primary mx-auto"></div>
-            </div>
+ <section id="about" class="section hidden bg-gray-50 dark:bg-gray-900 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">تاريخنا وخبرتنا</h3>
-                    <p class="text-lg mb-6 leading-relaxed">
-                        تأسست مجموعة الكحلاني وشركاه للمحاماة والاستشارات عام 2015، وقد كرسنا جهودنا لتقديم أفضل الخدمات القانونية في الجمهورية اليمنية.
-                    </p>
-                    <p class="text-lg mb-6 leading-relaxed">
-                        نتميز بخبرة واسعة في مختلف مجالات القانون، ونلتزم بتقديم حلول قانونية مبتكرة ومهنية لعملائنا.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
-                            <h4 class="text-xl font-bold mb-3 text-primary">رؤيتنا</h4>
-                            <p>أن نكون المكتب الرائد في تقديم الخدمات القانونية المتميزة</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
-                            <h4 class="text-xl font-bold mb-3 text-primary">قيمنا</h4>
-                            <p>العدالة، النزاهة، الاحترافية، والالتزام بأعلى المعايير المهنية</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
-                        <i class="fas fa-balance-scale text-6xl text-gold mb-6 balance-scale"></i>
-                        <h3 class="text-2xl font-bold mb-4">العدالة أساسنا</h3>
-                        <p class="text-lg">نؤمن بأن العدالة حق للجميع ونعمل جاهدين لضمان حصول عملائنا على حقوقهم</p>
-                    </div>
-                </div>
-            </div>
+      <!-- الصورة -->
+      <div class="flex justify-center">
+        <div class="w-64 h-80 sm:w-72 sm:h-96 rounded-xl overflow-hidden shadow-xl">
+          <img src="img/presonal.jpg" alt="المستشار إبراهيم الكحلاني"
+            class="w-full h-full object-cover object-top">
         </div>
-    </section>
+      </div>
+
+      <!-- النص -->
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-900 dark:text-blue-100 mb-6">عن المكتب</h2>
+
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg mb-4">
+          تأسس مكتب <strong>مجموعة الكحلاني وشركاه</strong> بهدف تقديم خدمات قانونية متكاملة تعتمد على الجودة، المهنية، والدقة في الأداء.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg mb-4">
+          بإشراف المستشار <strong>إبراهيم الكحلاني</strong>، نمتلك خبرة طويلة في الترافع أمام المحاكم بمختلف درجاتها، وصياغة العقود، والتحكيم، والاستشارات القانونية، مما جعلنا محل ثقة لكثير من الشركات والأفراد.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+          نعمل بروح الفريق ونلتزم بأعلى معايير النزاهة لتحقيق العدالة لعملائنا.
+        </p>
+      </div>
+    </div>
+
+    <!-- الرؤية والرسالة والهدف -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 text-center">
+      <!-- الرؤية -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <i class="fas fa-eye text-3xl text-blue-900 dark:text-blue-300 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2 text-blue-900 dark:text-blue-100">رؤيتنا</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          أن نكون الخيار الأول في اليمن في تقديم الخدمات القانونية المتكاملة للأفراد والشركات.
+        </p>
+      </div>
+
+      <!-- الرسالة -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <i class="fas fa-bullhorn text-3xl text-blue-900 dark:text-blue-300 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2 text-blue-900 dark:text-blue-100">رسالتنا</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          تقديم حلول قانونية مهنية تعتمد على الثقة، الالتزام، والاحترافية.
+        </p>
+      </div>
+
+      <!-- الهدف -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <i class="fas fa-bullseye text-3xl text-blue-900 dark:text-blue-300 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2 text-blue-900 dark:text-blue-100">هدفنا</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          حماية حقوق العملاء وتحقيق مصالحهم القانونية بأعلى قدر من الكفاءة.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
  <!-- Services Section -->
-<section id="services" class="py-20 bg-white dark:bg-gray-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="services" class="section hidden" class="py-20 bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4 text-3d">خدماتنا</h2>
+      <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">خدماتنا</h2>
       <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-      <p class="text-xl text-gray-600 dark:text-gray-400">نقدم مجموعة شاملة من الخدمات القانونية المتخصصة والمتوافقة مع احتياجات العملاء</p>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">نقدم مجموعة شاملة من الخدمات القانونية المتخصصة والمتوافقة مع احتياجات العملاء</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,7 +345,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           طلب استشارة عبر واتساب
         </a>
@@ -270,7 +362,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           طلب مراجعة عقد عبر واتساب
         </a>
@@ -287,7 +379,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           استفسار عن خدمات التحكيم
         </a>
@@ -304,7 +396,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           طلب إعداد لائحة
         </a>
@@ -321,7 +413,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           استشارة في القانون التجاري
         </a>
@@ -338,7 +430,7 @@
         </div>
         <a href="https://wa.me/967777722014"
            target="_blank"
-           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-2 w-full bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
+           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 w-full sm:w-auto bg-blue-900 text-white rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md">
           <i class="fab fa-whatsapp text-lg"></i>
           احصل على استشارة قانونية
         </a>
@@ -350,12 +442,12 @@
 
 
 <!-- Blog Section -->
-<section id="blog" class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="blog" class="section hidden py-20 bg-gray-50 dark:bg-gray-900" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-3d">المدونة القانونية</h2>
+            <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">المدونة القانونية</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-xl text-gray-600 dark:text-gray-400">مقالات ونصائح قانونية مفيدة</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">مقالات ونصائح قانونية مفيدة</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -371,7 +463,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">أساسيات القانون التجاري في اليمن</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">دليل شامل حول القوانين التجارية والإجراءات المطلوبة لتأسيس الشركات</p>
-                    <button onclick="toggleDetails(this)" class="text-primary hover:underline font-semibold">إظهار المزيد</button>
+                    <button onclick="toggleDetails(this)" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">إظهار المزيد</button>
                     <div class="hidden mt-3 text-gray-700 dark:text-gray-300">
                         <p>تشمل التفاصيل أنواع الشركات، إجراءات التسجيل، القوانين الضريبية، واللوائح التنظيمية التي يجب الالتزام بها في اليمن.</p>
                     </div>
@@ -388,7 +480,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">كيفية صياغة العقود بشكل صحيح</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">نصائح مهمة لصياغة العقود والاتفاقيات لضمان الحماية القانونية</p>
-                    <button onclick="toggleDetails(this)" class="text-primary hover:underline font-semibold">إظهار المزيد</button>
+                    <button onclick="toggleDetails(this)" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">إظهار المزيد</button>
                     <div class="hidden mt-3 text-gray-700 dark:text-gray-300">
                         <p>تتضمن النصائح تحديد البنود الأساسية، استخدام لغة واضحة، والتأكد من مطابقة القوانين المعمول بها.</p>
                     </div>
@@ -405,7 +497,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">حقوقك في النزاعات التجارية</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-4">معرفة حقوقك والإجراءات القانونية في حالة النزاعات التجارية</p>
-                    <button onclick="toggleDetails(this)" class="text-primary hover:underline font-semibold">إظهار المزيد</button>
+                    <button onclick="toggleDetails(this)" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">إظهار المزيد</button>
                     <div class="hidden mt-3 text-gray-700 dark:text-gray-300">
                         <p>اعرف كيف تحمي نفسك قانونيًا، متى تتجه للمحكمة، وكيفية التفاوض وحل الخلافات بشكل قانوني وسريع.</p>
                     </div>
@@ -425,16 +517,16 @@ function toggleDetails(button) {
 
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" class="section hidden py-20 bg-gray-50 dark:bg-gray-900" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-3d">شهادات العملاء</h2>
+                <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">شهادات العملاء</h2>
                 <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 dark:text-gray-400">آراء عملائنا الكرام حول خدماتنا</p>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">آراء عملائنا الكرام حول خدماتنا</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-star text-gold text-xl"></i>
                         <i class="fas fa-star text-gold text-xl"></i>
@@ -454,7 +546,7 @@ function toggleDetails(button) {
                     </div>
                 </div>
 
-                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-star text-gold text-xl"></i>
                         <i class="fas fa-star text-gold text-xl"></i>
@@ -474,7 +566,7 @@ function toggleDetails(button) {
                     </div>
                 </div>
 
-                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-star text-gold text-xl"></i>
                         <i class="fas fa-star text-gold text-xl"></i>
@@ -498,111 +590,112 @@ function toggleDetails(button) {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-3d">اتصل بنا</h2>
-                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 dark:text-gray-400">نحن هنا لمساعدتك في جميع احتياجاتك القانونية</p>
+<section id="contact" class="section hidden py-16 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-blue-900 dark:text-blue-100 mb-4 text-3d">اتصل بنا</h2>
+      <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        نحن هنا لمساعدتك في جميع احتياجاتك القانونية
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- نموذج الاتصال -->
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-bold mb-6 text-blue-900 dark:text-white">أرسل رسالة</h3>
+        <form action="https://formsubmit.co/ib.kohlane@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="mb-5">
+            <label class="block mb-2 font-semibold text-sm">الاسم الكامل</label>
+            <input type="text" name="name" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-600 dark:text-white" required>
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 font-semibold text-sm">البريد الإلكتروني</label>
+            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-600 dark:text-white" required>
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 font-semibold text-sm">رقم الهاتف</label>
+            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-600 dark:text-white" required>
+          </div>
+          <div class="mb-6">
+            <label class="block mb-2 font-semibold text-sm">الرسالة</label>
+            <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-lg border dark:bg-gray-600 dark:text-white" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold transition-all">
+            إرسال الرسالة
+          </button>
+        </form>
+      </div>
+
+      <!-- معلومات الاتصال -->
+      <div class="space-y-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md">
+          <h3 class="text-2xl font-bold mb-6 text-blue-900 dark:text-white">معلومات الاتصال</h3>
+          <div class="space-y-5">
+            <a href="https://maps.google.com/?q=صنعاء+شارع+التلفزيون+سوق+غثيم" target="_blank" class="flex items-start hover:text-blue-800 transition-all">
+              <i class="fas fa-map-marker-alt text-xl text-primary ml-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold">العنوان</h4>
+                <p class="text-gray-600 dark:text-gray-400">صنعاء - شارع التلفزيون - أمام سوق غثيم</p>
+              </div>
+            </a>
+
+            <div class="flex items-start">
+              <i class="fas fa-phone text-xl text-primary ml-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold">الهاتف</h4>
+                <p class="text-gray-600 dark:text-gray-400">
+                  <a href="tel:+967777722014" class="hover:text-primary">+967777722014</a> -
+                  <a href="tel:+967715004020" class="hover:text-primary">+967715004020</a>
+                </p>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold mb-6">أرسل رسالة</h3>
-                    <form id="contact-form">
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold mb-2">الاسم الكامل</label>
-                            <input type="text" class="w-full px-4 py-3 text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-600 dark:text-white" required>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold mb-2">البريد الإلكتروني</label>
-                            <input type="email" class="w-full px-4 py-3 text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-600 dark:text-white" required>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold mb-2">رقم الهاتف</label>
-                            <input type="tel" class="w-full px-4 py-3 text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-600 dark:text-white" required>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold mb-2">الرسالة</label>
-                            <textarea rows="5" class="w-full px-4 py-3 text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-600 dark:text-white" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                            إرسال الرسالة
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">معلومات الاتصال</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-2xl text-primary ml-4"></i>
-                                <div>
-                                    <h4 class="font-bold">العنوان</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">صنعاء - شارع التلفزيون - أمام سوق غثيم</p>
-                                </div>
-                            </div>
-                              <div class="flex items-center">
-                                        <a href="tel:+967777722014" class="flex items-center">
-                                            <i class="fas fa-phone text-2xl text-primary ml-4"></i>
-                                            <div>
-                                                <h4 class="font-bold"> الهاتف</h4>
-                                                <p class="text-gray-600 dark:text-gray-400">
-                                                    967777722014+ - 967715004020+
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                            <div class="flex items-center">
-                                <i class="fab fa-whatsapp text-2xl text-green-500 ml-4"></i>
-                                <div>
-                                    <h4 class="font-bold">واتساب</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">
-                                        <a href="https://wa.me/+967777722014">967777722014+</a>
-                                        </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <i class="fab fa-facebook text-2xl text-blue-600 ml-4"></i>
-                                <div>
-                                    <h4 class="font-bold">فيس بوك</h4>
-                                    <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="text-primary hover:underline">زورو صفحتنا على فيس بوك</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">ساعات العمل</h3>
-                        <div class="space-y-3">
-                            <div class="flex justify-between">
-                                <span>السبت - الخميس</span>
-                                <span class="font-bold">8:00 ص - 4:00 م</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>الجمعة</span>
-                                <span class="font-bold">مغلق</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex items-start">
+              <i class="fab fa-whatsapp text-xl text-green-500 ml-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold">واتساب</h4>
+                <p><a href="https://wa.me/967777722014" class="text-gray-600 dark:text-gray-400 hover:text-primary">+967777722014</a></p>
+              </div>
             </div>
+
+            <div class="flex items-start">
+              <i class="fab fa-facebook text-xl text-blue-600 ml-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold">فيس بوك</h4>
+                <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="text-primary hover:underline">زيارة صفحتنا</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- ساعات العمل -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md">
+          <h3 class="text-2xl font-bold mb-4 text-blue-900 dark:text-white">ساعات العمل</h3>
+          <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+            <div class="flex justify-between">
+              <span>السبت - الخميس</span>
+              <span class="font-bold">8:00 ص - 4:00 م</span>
+            </div>
+            <div class="flex justify-between">
+              <span>الجمعة</span>
+              <span class="font-bold text-red-500">مغلق</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-white dark:bg-gray-900">
+    <section id="faq" class="section hidden py-20 bg-gray-50 dark:bg-gray-900" class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-3d">الأسئلة الشائعة</h2>
+                <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">الأسئلة الشائعة</h2>
                 <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 dark:text-gray-400">إجابات على الأسئلة الأكثر شيوعاً</p>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">إجابات على الأسئلة الأكثر شيوعاً</p>
             </div>
 
             <div class="space-y-6">
@@ -660,160 +753,154 @@ function toggleDetails(button) {
     </section>
 
     <!-- Resources Section -->
-     <section id="resources" class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <section id="resources" class="section hidden py-20 bg-gray-50 dark:bg-gray-900" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-3d">الموارد القانونية</h2>
+            <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">الموارد القانونية</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-xl text-gray-600 dark:text-gray-400">مصادر مفيدة للمعلومات القانونية في اليمن</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">مصادر مفيدة للمعلومات القانونية في اليمن</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- القوانين اليمنية -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-book-open text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">القوانين اليمنية</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">مجموعة شاملة من القوانين واللوائح المعمول بها في الجمهورية اليمنية</p>
-                <a href="https://www.google.com/search?q=القوانين+اليمنية" target="_blank" class="text-primary hover:underline font-semibold">عرض القوانين</a>
+                <a href="https://www.google.com/search?q=القوانين+اليمنية" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">عرض القوانين</a>
             </div>
 
             <!-- نماذج العقود -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-file-alt text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">نماذج العقود</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">نماذج جاهزة للعقود والاتفاقيات الأكثر استخداماً في الممارسة القانونية</p>
-                <a href="https://www.noor-book.com/tag/نماذج-وصيغ-العقود-القانونية-في-اليمن" target="_blank" class="text-primary hover:underline font-semibold">تحميل النماذج</a>
+                <a href="https://www.noor-book.com/tag/نماذج-وصيغ-العقود-القانونية-في-اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">تحميل النماذج</a>
             </div>
 
             <!-- المحاكم اليمنية -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-university text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">المحاكم اليمنية</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">دليل المحاكم والجهات القضائية في اليمن مع معلومات الاتصال</p>
-                <a href="https://moj.gov.ye" target="_blank" class="text-primary hover:underline font-semibold">دليل المحاكم</a>
+                <a href="https://moj.gov.ye" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">دليل المحاكم</a>
             </div>
 
             <!-- الاستشارات المجانية -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-question-circle text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">الاستشارات المجانية</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">إجابات على الأسئلة القانونية الشائعة ونصائح مهمة</p>
-                <a href="https://www.google.com/search?q=استشارات+قانونية+مجانية+في+اليمن" target="_blank" class="text-primary hover:underline font-semibold">الاستشارات</a>
+                <a href="https://www.google.com/search?q=استشارات+قانونية+مجانية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">الاستشارات</a>
             </div>
 
             <!-- الأخبار القانونية -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-newspaper text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">الأخبار القانونية</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">آخر الأخبار والتطورات في المجال القانوني في اليمن</p>
-                <a href="https://www.google.com/search?q=الأخبار+القانونية+في+اليمن" target="_blank" class="text-primary hover:underline font-semibold">قراءة الأخبار</a>
+                <a href="https://www.google.com/search?q=الأخبار+القانونية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">قراءة الأخبار</a>
             </div>
 
             <!-- نماذج الطلبات -->
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <i class="fas fa-download text-4xl text-primary mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">نماذج الطلبات</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">نماذج جاهزة للطلبات والمذكرات القانونية المختلفة</p>
-                <a href="https://www.google.com/search?q=نماذج+طلبات+قانونية+يمنية" target="_blank" class="text-primary hover:underline font-semibold">تحميل النماذج</a>
+                <a href="https://www.google.com/search?q=نماذج+طلبات+قانونية+يمنية" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">تحميل النماذج</a>
             </div>
 
         </div>
     </div>
 </section>
  <!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- العمود 1 -->
-            <div>
-                <div class="flex items-center mb-6">
-                    <i class="fas fa-balance-scale text-gold text-2xl balance-scale ml-2"></i>
-                    <a href="https://maps.google.com/?q=صنعاء+شارع+التلفزيون+سوق+غثيم" target="_blank" class="text-xl font-bold hover:text-white">
-                        مجموعة الكحلاني وشركاه
-                    </a>
-                </div>
-                <p class="text-gray-400 mb-4">مكتب محاماة متخصص في تقديم أفضل الخدمات القانونية والاستشارات المهنية في اليمن.</p>
-                <div class="flex space-x-reverse space-x-4">
-                    <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-facebook text-xl"></i>
-                    </a>
-                    <a href="https://wa.me/967716216016" target="_blank" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
-                              <a href="mailto:ib.kohlane@gmail.com" target="_blank" class="text-gray-400 hover:text-white">
-                                       <i class="fas fa-envelope ml-2"></i>
-                                    </a>
-                </div>
-            </div>
+<footer class="bg-gray-900 text-white py-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
-            <!-- العمود 2 -->
-            <div>
-                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li>صياغة العقود والاتفاقيات</li>
-                    <li>التحكيم وقسمة الحصص</li>
-                    <li>إعداد اللوائح والأنظمة</li>
-                    <li>الدراسات والبحوث القانونية</li>
-                    <li>الاستشارات القانونية</li>
-                </ul>
-            </div>
+      <!-- العمود 1 -->
+      <div>
+        <div class="flex items-center mb-4">
+          <i class="fas fa-balance-scale text-gold text-2xl ml-2"></i>
+          <a href="https://maps.google.com/?q=صنعاء+شارع+التلفزيون+سوق+غثيم" target="_blank"
+            class="text-lg font-bold hover:text-white">
+            مجموعة الكحلاني وشركاه
+          </a>
+        </div>
+        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+          مكتب محاماة متخصص في تقديم أفضل الخدمات القانونية والاستشارات المهنية في اليمن.
+        </p>
+        <div class="flex space-x-reverse space-x-4">
+          <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank"
+            class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/967716216016" target="_blank" class="text-gray-400 hover:text-white text-xl">
+            <i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:ib.kohlane@gmail.com" target="_blank" class="text-gray-400 hover:text-white text-xl">
+            <i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
 
-            <!-- العمود 3 -->
- <!-- العمود 3 -->
-<div>
-    <h4 class="text-lg font-bold mb-6">معلومات الاتصال</h4>
-    <div class="space-y-3 text-gray-400">
-        <p>
-            <i class="fas fa-map-marker-alt ml-2"></i>
+      <!-- العمود 2 -->
+      <div>
+        <h4 class="text-base font-bold mb-4">خدماتنا</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>صياغة العقود والاتفاقيات</li>
+          <li>التحكيم وقسمة الحصص</li>
+          <li>إعداد اللوائح والأنظمة</li>
+          <li>الدراسات والبحوث القانونية</li>
+          <li>الاستشارات القانونية</li>
+        </ul>
+      </div>
+
+      <!-- العمود 3 -->
+      <div>
+        <h4 class="text-base font-bold mb-4">معلومات الاتصال</h4>
+        <div class="space-y-2 text-sm text-gray-400">
+          <p><i class="fas fa-map-marker-alt ml-2"></i>
             <a href="https://maps.google.com/?q=صنعاء+شارع+التلفزيون+سوق+غثيم" target="_blank" class="hover:text-white">
-                صنعاء - شارع التلفزيون - أمام سوق غثيم
+              صنعاء - شارع التلفزيون - أمام سوق غثيم
             </a>
-        </p>
-        <p>
-            <i class="fas fa-phone ml-2"></i>
-            <a href="tel:777220014" class="hover:text-white">777220014</a> -
+          </p>
+          <p><i class="fas fa-phone ml-2"></i>
+            <a href="tel:777722014" class="hover:text-white">777722014</a> -
             <a href="tel:715004020" class="hover:text-white">715004020</a>
-        </p>
-        <p>
-            <i class="fab fa-whatsapp ml-2"></i>
+          </p>
+          <p><i class="fab fa-whatsapp ml-2"></i>
             <a href="https://wa.me/967777722014" target="_blank" class="hover:text-white">+967777722014</a>
-        </p>
-        <p>
-            <i class="fas fa-envelope ml-2"></i>
+          </p>
+          <p><i class="fas fa-envelope ml-2"></i>
             <a href="mailto:ib.kohlane@gmail.com" class="hover:text-white">ib.kohlane@gmail.com</a>
-        </p>
-    </div>
-</div>
-
-
-            <!-- العمود 4: الروابط السريعة -->
-            <div>
-                <h4 class="text-lg font-bold mb-6">الروابط السريعة</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#home" class="hover:text-white">الرئيسية</a></li>
-                    <li><a href="#about" class="hover:text-white">عن المكتب</a></li>
-                    <li><a href="#services" class="hover:text-white">خدماتنا</a></li>
-                    <li><a href="#blog" class="hover:text-white">المدونة</a></li>
-                    <li><a href="#testimonials" class="hover:text-white">الشهادات</a></li>
-                    <li><a href="#contact" class="hover:text-white">اتصل بنا</a></li>
-                    <li><a href="#faq" class="hover:text-white">الأسئلة الشائعة</a></li>
-                    <li><a href="#resources" class="hover:text-white">الموارد</a></li>
-                </ul>
-            </div>
+          </p>
         </div>
+      </div>
 
-        <!-- القسم السفلي -->
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2024 مجموعة الكحلاني وشركاه للمحاماة والاستشارات. جميع الحقوق محفوظة.</p>
-            <p class="mt-2">
-                تصميم <a href="mailto:engabobakrh@gmail.com" class="text-gray-300 hover:text-white underline">المهندس أبو بكر حسان</a>
-            </p>
-        </div>
+      <!-- العمود 4 -->
+      <div>
+        <h4 class="text-base font-bold mb-4">الروابط السريعة</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#home" class="hover:text-white">الرئيسية</a></li>
+          <li><a href="#about" class="hover:text-white">عن المكتب</a></li>
+          <li><a href="#services" class="hover:text-white">خدماتنا</a></li>
+          <li><a href="#blog" class="hover:text-white">المدونة</a></li>
+          <li><a href="#testimonials" class="hover:text-white">الشهادات</a></li>
+          <li><a href="#contact" class="hover:text-white">اتصل بنا</a></li>
+          <li><a href="#faq" class="hover:text-white">الأسئلة الشائعة</a></li>
+          <li><a href="#resources" class="hover:text-white">الموارد</a></li>
+        </ul>
+      </div>
     </div>
+
+    <!-- القسم السفلي -->
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-xs">
+      <p>&copy; 2024 مجموعة الكحلاني وشركاه للمحاماة والاستشارات. جميع الحقوق محفوظة.</p>
+      <p class="mt-1">
+        تصميم <a href="mailto:engabobakrh@gmail.com" class="text-gray-300 hover:text-white underline">المهندس أبو بكر
+          حسان</a>
+      </p>
+    </div>
+  </div>
 </footer>
-
-
 
     <script>
         // Dark mode detection
@@ -876,7 +963,7 @@ function toggleDetails(button) {
             const modal = document.createElement('div');
             modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
             modal.innerHTML = `
-                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-md w-full mx-4 text-center">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all max-w-md w-full mx-4 text-center">
                     <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">تم إرسال الرسالة بنجاح!</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">شكراً لتواصلكم معنا. سنقوم بالرد عليكم في أقرب وقت ممكن.</p>
@@ -922,6 +1009,66 @@ function toggleDetails(button) {
                 }
             });
         });
+
+        // Blog details toggle
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            details.classList.toggle('hidden');
+        }
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
+    const sections = document.querySelectorAll(".section");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").replace("#", "");
+
+        sections.forEach(section => {
+          if (section.id === targetId) {
+            section.classList.remove("hidden");
+            section.classList.add("block");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            section.classList.remove("block");
+            section.classList.add("hidden");
+          }
+        });
+
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu) mobileMenu.classList.add("hidden");
+      });
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href").slice(1);
+      const targetSection = document.getElementById(targetId);
+      const allSections = document.querySelectorAll(".section");
+
+      if (targetSection) {
+        e.preventDefault();
+
+        // إخفاء كل الأقسام
+        allSections.forEach(sec => sec.classList.add("hidden"));
+
+        // إظهار القسم المطلوب
+        targetSection.classList.remove("hidden");
+
+        // تمرير إلى الأعلى
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // إغلاق قائمة الجوال إذا كانت مفتوحة
+        document.getElementById("mobile-menu")?.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
