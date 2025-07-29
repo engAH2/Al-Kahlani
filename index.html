@@ -757,67 +757,80 @@ function toggleDetails(button) {
     </section>
 
     <!-- Resources Section -->
-     <section id="resources" class="section hidden py-12 bg-gray-50 dark:bg-gray-900" class="py-12 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-full mx-auto px-4 sm:px-5 md:px-6">
-        <div class="text-center mb-8">
-            <h2 class="text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-3d">الموارد القانونية</h2>
-            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">مصادر مفيدة للمعلومات القانونية في اليمن</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- القوانين اليمنية -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-book-open text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">القوانين اليمنية</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">مجموعة شاملة من القوانين واللوائح المعمول بها في الجمهورية اليمنية</p>
-                <a href="https://www.google.com/search?q=القوانين+اليمنية" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">عرض القوانين</a>
-            </div>
-
-            <!-- نماذج العقود -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-file-alt text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">نماذج العقود</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">نماذج جاهزة للعقود والاتفاقيات الأكثر استخداماً في الممارسة القانونية</p>
-                <a href="https://www.noor-book.com/tag/نماذج-وصيغ-العقود-القانونية-في-اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">تحميل النماذج</a>
-            </div>
-
-            <!-- المحاكم اليمنية -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-university text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">المحاكم اليمنية</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">دليل المحاكم والجهات القضائية في اليمن مع معلومات الاتصال</p>
-                <a href="https://moj.gov.ye" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">دليل المحاكم</a>
-            </div>
-
-            <!-- الاستشارات المجانية -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-question-circle text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">الاستشارات المجانية</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">إجابات على الأسئلة القانونية الشائعة ونصائح مهمة</p>
-                <a href="https://www.google.com/search?q=استشارات+قانونية+مجانية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">الاستشارات</a>
-            </div>
-
-            <!-- الأخبار القانونية -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-newspaper text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">الأخبار القانونية</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">آخر الأخبار والتطورات في المجال القانوني في اليمن</p>
-                <a href="https://www.google.com/search?q=الأخبار+القانونية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">قراءة الأخبار</a>
-            </div>
-
-            <!-- نماذج الطلبات -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                <i class="fas fa-download text-4xl text-primary mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">نماذج الطلبات</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">نماذج جاهزة للطلبات والمذكرات القانونية المختلفة</p>
-                <a href="https://www.google.com/search?q=نماذج+طلبات+قانونية+يمنية" target="_blank" class="text-blue-900 dark:text-blue-200 hover:underline font-semibold transition-all">تحميل النماذج</a>
-            </div>
-
-        </div>
+<section id="resources" class="py-10 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- العنوان -->
+    <div class="text-center mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-blue-900 dark:text-blue-100 mb-3">الموارد القانونية</h2>
+      <div class="w-16 h-1 mx-auto bg-primary mb-4 rounded-full"></div>
+      <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+        مصادر مفيدة للمعلومات القانونية في اليمن
+      </p>
     </div>
+
+    <!-- البطاقات -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      
+      <!-- قالب بطاقة -->
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-book-open text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">القوانين اليمنية</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          مجموعة شاملة من القوانين واللوائح المعمول بها في الجمهورية اليمنية
+        </p>
+        <a href="https://www.google.com/search?q=القوانين+اليمنية" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">عرض القوانين</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-file-alt text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">نماذج العقود</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          نماذج جاهزة للعقود والاتفاقيات الأكثر استخداماً في الممارسة القانونية
+        </p>
+        <a href="https://www.noor-book.com/tag/نماذج-وصيغ-العقود-القانونية-في-اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">تحميل النماذج</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-university text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">المحاكم اليمنية</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          دليل المحاكم والجهات القضائية في اليمن مع معلومات الاتصال
+        </p>
+        <a href="https://moj.gov.ye" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">دليل المحاكم</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-question-circle text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">الاستشارات المجانية</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          إجابات على الأسئلة القانونية الشائعة ونصائح مهمة
+        </p>
+        <a href="https://www.google.com/search?q=استشارات+قانونية+مجانية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">الاستشارات</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-newspaper text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">الأخبار القانونية</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          آخر الأخبار والتطورات في المجال القانوني في اليمن
+        </p>
+        <a href="https://www.google.com/search?q=الأخبار+القانونية+في+اليمن" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">قراءة الأخبار</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-download text-2xl text-primary mb-3"></i>
+        <h3 class="text-base font-bold mb-2">نماذج الطلبات</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-snug">
+          نماذج جاهزة للطلبات والمذكرات القانونية المختلفة
+        </p>
+        <a href="https://www.google.com/search?q=نماذج+طلبات+قانونية+يمنية" target="_blank" class="text-blue-900 dark:text-blue-200 font-semibold hover:underline text-sm">تحميل النماذج</a>
+      </div>
+
+    </div>
+  </div>
 </section>
+
  <!-- Footer -->
 <footer class="bg-gray-900 text-white py-4">
   <div class="max-w-6xl mx-auto px-4 sm:px-5 md:px-6">
