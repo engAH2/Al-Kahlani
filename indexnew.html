@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#14274E',
+                        'secondary': '#394867',
+                        'accent': '#0096FF',
+                        'gold': '#E1B12C',
+                        'light-bg': '#F1F6F9',
+                        'white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--white); color: var(--secondary); font-size: 15px; /* تقليل حجم الخط الأساسي قليلاً */ }
+
+        /* تأثير ثلاثي الأبعاد للعناوين الرئيسية (بحجم أصغر) */
+        .title-3d {
+            font-weight: 900;
+            color: #14274E;
+            letter-spacing: 0.5px;
+            text-shadow: 
+                1px 1px 0px #9BA4B4,
+                2px 2px 0px #9BA4B4,
+                3px 3px 5px rgba(0,0,0,0.1);
+        }
+        /* تعديل حجم الخط للجوال */
+        @media (max-width: 768px) {
+            .title-3d {
+                font-size: 2rem; /* 32px - حجم أصغر للجوال */
+                text-shadow: 
+                    1px 1px 0px #9BA4B4,
+                    2px 2px 2px rgba(0,0,0,0.1);
+            }
+        }
+
+        /* فاصل الأقسام */
+        .section-divider {
+            height: 5px;
+            width: 100px;
+            background: #F1F6F9;
+            box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
+            border-radius: 4px;
+            margin: 2rem auto;
+        }
+
+        /* تصميم قسم الخدمات التفاعلي */
+        .service-card {
+            background-color: #FFFFFF;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px -15px rgba(20,39,78,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .service-header {
+            padding: 1.25rem; /* 20px */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .service-header:hover { background-color: #f1f6f9; }
+        .service-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out, padding 0.7s ease;
+            padding: 0 1.25rem;
+            border-top: 1px solid transparent;
+        }
+        .service-card.open .service-details {
+            max-height: 500px;
+            padding: 1.25rem;
+            border-top-color: #e5e7eb;
+        }
+        .service-icon-toggle { transition: transform 0.4s ease; margin-right: auto; }
+        .service-card.open .service-icon-toggle { transform: rotate(180deg); }
+
+        /* تصميم قسم الأسئلة الشائعة */
+        .faq-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem; }
+        .faq-question { cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 700; color: #14274E; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding-top 0.5s ease; padding-top: 0; }
+        .faq-item.open .faq-answer { max-height: 200px; padding-top: 1rem; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-item.open .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="font-sans">
+
+<!-- Navigation -->
+<nav class="bg-white/90 backdrop-blur-lg shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center"> <!-- تقليل ارتفاع النافبار -->
+      <a href="#home" class="flex items-center">
+        <i class="fas fa-balance-scale text-gold text-2xl ml-2"></i>
+        <span class="text-lg md:text-xl font-bold text-primary">مجموعة مكاتب الكحلاني</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-reverse space-x-5">
+        <a href="#home" class="text-sm text-secondary hover:text-accent transition-colors font-medium">الرئيسية</a>
+        <a href="#services" class="text-sm text-secondary hover:text-accent transition-colors font-medium">خدماتنا</a>
+        <a href="#testimonials" class="text-sm text-secondary hover:text-accent transition-colors font-medium">التقييمات</a>
+        <a href="#faq" class="text-sm text-secondary hover:text-accent transition-colors font-medium">الأسئلة الشائعة</a>
+        <a href="#contact" class="text-sm text-secondary hover:text-accent transition-colors font-medium">اتصل بنا</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-primary focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-accent hover:bg-light-bg">الرئيسية</a>
+      <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-accent hover:bg-light-bg">خدماتنا</a>
+      <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-accent hover:bg-light-bg">التقييمات</a>
+      <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-accent hover:bg-light-bg">الأسئلة الشائعة</a>
+      <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-accent hover:bg-light-bg">اتصل بنا</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="pt-28 pb-16 md:pt-32 md:pb-20 bg-light-bg">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="text-center md:text-right">
+        <h1 class="text-3xl md:text-4xl title-3d mb-4">مجموعة مكاتب الكحلاني</h1>
+        <h2 class="text-lg md:text-xl text-secondary font-medium mb-6">شريككم القانوني نحو تحقيق العدالة</h2>
+        <p class="text-sm md:text-base leading-relaxed mb-8">نقدم لكم خبراتنا القانونية الواسعة وفريقًا من المحامين المتخصصين لضمان حقوقكم وحماية مصالحكم بكل احترافية وأمانة.</p>
+        <a href="https://wa.me/967777722014?text=السلام%20عليكم،%20أرغب%20في%20طلب%20استشارة%20قانونية%20مجانية." target="_blank" class="inline-block bg-accent text-white font-bold py-3 px-8 rounded-full text-base hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="fab fa-whatsapp ml-2"></i> اطلب استشارة مجانية
+        </a>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+          <img src="img/presonal.jpg" alt="المستشار إبراهيم الكحلاني" class="w-full h-full object-cover object-center">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-3xl md:text-4xl title-3d">خدماتنا القانونية</h2>
+    </div>
+    <div class="section-divider"></div>
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-header">
+          <i class="fas fa-gavel text-2xl text-accent"></i>
+          <h3 class="text-base font-bold text-primary">التقاضي والتمثيل القانوني</h3>
+          <i class="fas fa-chevron-down service-icon-toggle text-secondary"></i>
+        </div>
+        <div class="service-details text-sm">
+          <p>نترافع عنكم في جميع أنواع القضايا (جنائية، مدنية، تجارية، إدارية) أمام كافة المحاكم بدرجاتها المختلفة، ونضمن لكم دفاعًا قويًا وتمثيلاً مشرفًا.</p>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-header">
+          <i class="fas fa-file-signature text-2xl text-accent"></i>
+          <h3 class="text-base font-bold text-primary">صياغة العقود والاتفاقيات</h3>
+          <i class="fas fa-chevron-down service-icon-toggle text-secondary"></i>
+        </div>
+        <div class="service-details text-sm">
+          <p>نقوم بإعداد ومراجعة كافة العقود (بيع، إيجار، عمل، شراكة) لضمان حمايتها قانونيًا وخلوها من الثغرات التي قد تضر بمصالحكم المستقبلية.</p>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-header">
+          <i class="fas fa-handshake text-2xl text-accent"></i>
+          <h3 class="text-base font-bold text-primary">التحكيم وفض النزاعات</h3>
+          <i class="fas fa-chevron-down service-icon-toggle text-secondary"></i>
+        </div>
+        <div class="service-details text-sm">
+          <p>نقدم حلولاً بديلة لفض النزاعات عبر التحكيم والوساطة، مما يوفر الوقت والتكاليف ويحافظ على العلاقات التجارية بين الأطراف.</p>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-header">
+          <i class="fas fa-building text-2xl text-accent"></i>
+          <h3 class="text-base font-bold text-primary">قانون الشركات والأعمال</h3>
+          <i class="fas fa-chevron-down service-icon-toggle text-secondary"></i>
+        </div>
+        <div class="service-details text-sm">
+          <p>نوفر الدعم الكامل للشركات بدءًا من إجراءات التأسيس، وتسجيل العلامات التجارية، وتقديم الاستشارات الدورية لضمان الامتثال القانوني.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-light-bg">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-4">
+            <h2 class="text-3xl md:text-4xl title-3d">ماذا يقول عملاؤنا؟</h2>
+        </div>
+        <div class="section-divider"></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card p-6"><div class="flex items-center mb-3"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-3 border-2 border-accent" alt="عميل"><div><h4 class="font-bold text-primary text-base">أحمد عبدالله</h4><div class="text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-sm text-secondary">"فريق عمل محترف ومتمكن، قدموا لي استشارة قانونية أنقذت شركتي. أنصح بهم بشدة."</p></div>
+            <div class="card p-6"><div class="flex items-center mb-3"><img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-3 border-2 border-accent" alt="عميلة"><div><h4 class="font-bold text-primary text-base">فاطمة علي</h4><div class="text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-sm text-secondary">"تعامل راقٍ ومتابعة مستمرة للقضية حتى تم حلها. شكرًا لمجموعة مكاتب الكحلاني."</p></div>
+            <div class="card p-6"><div class="flex items-center mb-3"><img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-12 h-12 rounded-full mr-3 border-2 border-accent" alt="عميل"><div><h4 class="font-bold text-primary text-base">محمد صالح</h4><div class="text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-sm text-secondary">"خبرة قانونية لا مثيل لها، تمكنوا من حل قضيتي المعقدة بكفاءة عالية."</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-4">
+            <h2 class="text-3xl md:text-4xl title-3d">الأسئلة الشائعة</h2>
+        </div>
+        <div class="section-divider"></div>
+        <div class="max-w-3xl mx-auto">
+            <div class="faq-item"><div class="faq-question"><span>ما هي أتعاب الاستشارة الأولى؟</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer text-sm"><p>نحن نقدم استشارة أولية مجانية عبر واتساب لتقييم قضيتكم وتوضيح الخطوات التالية والتكاليف المتوقعة بكل شفافية.</p></div></div>
+            <div class="faq-item"><div class="faq-question"><span>هل تتعاملون مع قضايا الشركات فقط؟</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer text-sm"><p>لا، نحن نقدم خدماتنا لكل من الشركات والأفراد في مختلف المجالات القانونية، بما في ذلك القضايا المدنية، التجارية، والجنائية.</p></div></div>
+            <div class="faq-item"><div class="faq-question"><span>كيف يمكنني متابعة قضيتي؟</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer text-sm"><p>نؤمن بالتواصل المستمر. سيتم تعيين محامٍ مسؤول عن قضيتكم وسيكون على تواصل دائم معكم لإطلاعكم على كافة المستجدات.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-light-bg">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-3xl md:text-4xl title-3d">تواصل معنا</h2>
+    </div>
+    <div class="section-divider"></div>
+    <div class="card max-w-4xl mx-auto p-6 md:p-10">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-xl font-bold text-primary mb-4">أرسل رسالة مباشرة</h3>
+          <form action="https://formsubmit.co/ib.kohlane@gmail.com" method="POST">
+            <div class="mb-3"><input type="text" name="name" placeholder="الاسم الكامل" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></div>
+            <div class="mb-3"><input type="email" name="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></div>
+            <div class="mb-4"><textarea name="message" rows="4" placeholder="كيف يمكننا مساعدتك؟" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></textarea></div>
+            <button type="submit" class="w-full bg-primary text-white font-bold py-2 px-8 rounded-full text-base hover:bg-secondary transition-all">إرسال الرسالة</button>
+          </form>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-primary mb-4">أو تواصل عبر:</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=صنعاء+شارع+التلفزيون" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-map-marker-alt"></i></div><span class="mr-3 text-secondary group-hover:text-accent">صنعاء - شارع التلفزيون</span></a>
+          <a href="tel:+967777722014" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-phone"></i></div><span class="mr-3 text-secondary group-hover:text-accent" dir="ltr">+967 777 722 014</span></a>
+          <a href="mailto:ib.kohlane@gmail.com" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-envelope"></i></div><span class="mr-3 text-secondary group-hover:text-accent">ib.kohlane@gmail.com</span></a>
+          <a href="https://wa.me/967777722014" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-whatsapp"></i></div><span class="mr-3 text-secondary group-hover:text-accent">واتساب</span></a>
+          <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-facebook"></i></div><span class="mr-3 text-secondary group-hover:text-accent">فيسبوك</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white pt-12 pb-6">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-2xl font-bold mb-2">مجموعة مكاتب الكحلاني</h3>
+    <p class="text-gray-300 text-sm mb-5">شريككم القانوني الموثوق.</p>
+    <div class="border-t border-gray-700/50 pt-5">
+        <p class="text-gray-400 text-sm">&copy; 2024 جميع الحقوق محفوظة.</p>
+        <p class="text-xs text-gray-500 mt-2">تصميم وتطوير: <a href="mailto:engabobakrh@gmail.com" class="hover:text-accent underline">المهندس أبو بكر حسان</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.classList.toggle('open');
+        });
+    });
+
+    // Services Accordion
+    document.querySelectorAll('.service-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const serviceCard = header.parentElement;
+            // Close other open cards
+            document.querySelectorAll('.service-card.open').forEach(openCard => {
+                if (openCard !== serviceCard) {
+                    openCard.classList.remove('open');
+                }
+            });
+            // Toggle the clicked card
+            serviceCard.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>```
