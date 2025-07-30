@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات</title>
+  <title> المحامي ابراهيم الكحلاني |استشارات قانونية</title>
 
   <!-- Meta Tags أساسية لتحسين الفهرسة -->
   <meta name="description" content="مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات القانونية - نخبة من المحامين المتخصصين في التقاضي، العقود، التحكيم، الشركات، القضايا العقارية وغيرها.">
@@ -113,6 +113,18 @@
       box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
       border-radius: 4px;
       margin: 2rem auto;
+    }
+
+    /* فاصل ثلاثي الأبعاد صغير */
+    .divider-3d {
+      height: 7px;
+      width: 80px;
+      margin: 1.5rem auto;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #e1b12c 0%, #14274e 100%);
+      box-shadow:
+        0 2px 8px rgba(20,39,78,0.12),
+        0 -2px 8px rgba(225,177,44,0.08);
     }
 
     .service-card {
@@ -258,175 +270,130 @@
     </div>
   </div>
 </section>
-
-
+ 
  <!-- Services Section -->
-<section id="services" class="py-16">
+<section id="services" class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-4">
-      <h2 class="text-3xl md:text-4xl title-3d">خدماتنا القانونية</h2>
+    <div class="text-center mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary title-3d">خدماتنا القانونية</h2>
+      <div class="section-divider mb-6 mt-4"></div>
     </div>
-    <div class="section-divider mb-8"></div>
 
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- بطاقة خدمة - كرر التنسيق -->
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-gavel text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">التقاضي والتمثيل القانوني</h3>
+      <!-- خدمة 1 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">التقاضي والتمثيل القانوني</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>نترافع عنكم في جميع أنواع القضايا (جنائية، مدنية، تجارية، إدارية) أمام كافة المحاكم ونضمن دفاعًا قويًا وتمثيلاً مشرفًا.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>نترافع عنكم في جميع أنواع القضايا (جنائية، مدنية، تجارية، إدارية) أمام كافة المحاكم.</p>
         </div>
       </div>
 
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-file-signature text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">صياغة العقود والاتفاقيات</h3>
+      <!-- خدمة 2 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">صياغة العقود والاتفاقيات</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>نقوم بإعداد ومراجعة كافة العقود (بيع، إيجار، عمل، شراكة) لضمان حمايتها قانونيًا وخلوها من الثغرات.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>إعداد ومراجعة العقود القانونية لضمان حقوق الأطراف وتفادي الثغرات القانونية.</p>
         </div>
       </div>
 
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-handshake text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">التحكيم وفض النزاعات</h3>
+      <!-- خدمة 3 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">الاستشارات القانونية</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>نقدم حلولاً بديلة لفض النزاعات عبر التحكيم والوساطة، مما يوفر الوقت والتكاليف ويحافظ على العلاقات التجارية.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>تقديم استشارات قانونية دقيقة للأفراد والشركات في مختلف المجالات.</p>
         </div>
       </div>
 
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-building text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">قانون الشركات والأعمال</h3>
+      <!-- خدمة 4 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">التحكيم وتسوية النزاعات</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>نوفر الدعم الكامل للشركات بدءًا من التأسيس وحتى الاستشارات اليومية والامتثال للقوانين.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>نقوم بتمثيلكم في إجراءات التحكيم وحل النزاعات خارج إطار القضاء.</p>
         </div>
       </div>
 
-      <!-- خدمات إضافية بنفس التنسيق -->
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-landmark text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">القضايا العقارية</h3>
+      <!-- خدمة 5 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">القانون التجاري والشركات</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>حلول قانونية متكاملة للنزاعات العقارية، الملكيات، الإيجارات، والمخططات السكنية.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>تأسيس الشركات، وصياغة اللوائح والأنظمة التجارية، ودعم الامتثال القانوني.</p>
         </div>
       </div>
 
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-users text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">قضايا الأحوال الشخصية</h3>
+      <!-- خدمة 6 -->
+      <div class="bg-gray-50 rounded-2xl shadow-md p-4 transition hover:shadow-xl group">
+        <div class="flex items-center justify-between cursor-pointer" onclick="toggleService(this)">
+          <div class="flex items-center gap-3">
+            <div class="text-accent text-xl transform transition-transform duration-300 group-hover:scale-125">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-base font-bold text-primary">قانون العقارات والممتلكات</h3>
+          </div>
           <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
         </div>
-        <div class="service-details text-sm hidden">
-          <p>نتعامل مع قضايا الطلاق، الحضانة، النفقة، والوصايا بحساسية واحتراف.</p>
+        <div class="service-details text-sm mt-3 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p>حل النزاعات العقارية، وتوثيق الملكيات، ومراجعة عقود البيع والإيجار.</p>
         </div>
       </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-money-bill-wave text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">القضايا المصرفية والمالية</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>نقدم الدعم القانوني للبنوك والعملاء في حالات الديون والتعثر المالي.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-briefcase text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">قانون العمل والعمال</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>نحمي حقوق العمال والشركات من خلال تنظيم العقود ومعالجة النزاعات العمالية.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-shield-alt text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">القضايا الجنائية</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>نقوم بالدفاع أمام المحاكم الجنائية بكل درجاتها لضمان محاكمة عادلة.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-copyright text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">الملكية الفكرية</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>تسجيل العلامات التجارية وبراءات الاختراع وحماية حقوق النشر الخاصة بكم.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-plane text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">قانون الطيران</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>استشارات قانونية لشركات الطيران والركاب في مختلف القضايا الجوية.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-pills text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">الأخطاء الطبية</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>نقدم خدمات تمثيل قانوني في قضايا الأخطاء الطبية والتعويضات الناتجة عنها.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-header" onclick="toggleService(this)">
-          <i class="fas fa-globe text-2xl text-accent"></i>
-          <h3 class="text-base font-bold text-primary">القانون الدولي</h3>
-          <i class="fas fa-chevron-down service-icon-toggle text-secondary transition-transform duration-300"></i>
-        </div>
-        <div class="service-details text-sm hidden">
-          <p>تمثيل في القضايا ذات البعد الدولي والمعاهدات بين الدول والشركات متعددة الجنسيات.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- JavaScript لتفعيل الإظهار والإخفاء -->
 <script>
-  function toggleService(header) {
-    const details = header.nextElementSibling;
-    const icon = header.querySelector('.service-icon-toggle');
-    details.classList.toggle('hidden');
-    icon.classList.toggle('rotate-180');
+  function toggleService(element) {
+    const details = element.nextElementSibling;
+    const icon = element.querySelector('.service-icon-toggle');
+
+    if (details.classList.contains('max-h-0')) {
+      details.classList.remove('max-h-0');
+      details.classList.add('max-h-40'); // يمكن تعديله حسب الحاجة
+      icon.classList.add('rotate-180');
+    } else {
+      details.classList.remove('max-h-40');
+      details.classList.add('max-h-0');
+      icon.classList.remove('rotate-180');
+    }
   }
 </script>
 
@@ -436,6 +403,15 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-4">
             <h2 class="text-3xl md:text-4xl title-3d">ماذا يقول عملاؤنا؟</h2>
+            <!-- أزرار التقييمات -->
+            <div class="flex justify-center gap-4 mt-4">
+              <a href="#testimonials" class="bg-accent text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-all shadow hover:shadow-lg">
+                عرض كافة التقيمات
+              </a>
+              <button id="addTestimonialBtn" class="bg-gold text-primary font-bold py-2 px-6 rounded-full hover:bg-yellow-500 transition-all shadow hover:shadow-lg">
+                إضافة تقييم
+              </button>
+            </div>
         </div>
         <div class="section-divider"></div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -443,6 +419,35 @@
             <div class="card p-6"><div class="flex items-center mb-3"><img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-3 border-2 border-accent" alt="عميلة"><div><h4 class="font-bold text-primary text-base">فاطمة علي</h4><div class="text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-sm text-secondary">تعامل راقٍ ومتابعة مستمرة للقضية حتى تم حلها. شكرًا لمجموعة مكاتب الكحلاني.</p></div>
             <div class="card p-6"><div class="flex items-center mb-3"><img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-12 h-12 rounded-full mr-3 border-2 border-accent" alt="عميل"><div><h4 class="font-bold text-primary text-base">محمد صالح</h4><div class="text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-sm text-secondary">خبرة قانونية لا مثيل لها، تمكنوا من حل قضيتي المعقدة بكفاءة عالية.</p></div>
         </div>
+    </div>
+    <!-- نافذة منبثقة لإضافة تقييم -->
+    <div id="testimonialModal" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-lg relative">
+        <button id="closeTestimonialModal" class="absolute top-2 left-2 text-secondary hover:text-accent text-xl"><i class="fas fa-times"></i></button>
+        <h3 class="text-xl font-bold text-primary mb-4 text-center">إضافة تقييم جديد</h3>
+        <form id="testimonialForm">
+          <div class="mb-3">
+            <input type="text" name="name" placeholder="اسمك" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="review" rows="3" placeholder="اكتب تقييمك هنا..." class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></textarea>
+          </div>
+          <div class="mb-4 flex gap-2 items-center">
+            <span class="text-secondary text-sm">التقييم:</span>
+            <div id="starRating" class="flex gap-1">
+              <!-- نجوم التقييم -->
+              <i class="fas fa-star text-gray-300 cursor-pointer" data-value="1"></i>
+              <i class="fas fa-star text-gray-300 cursor-pointer" data-value="2"></i>
+              <i class="fas fa-star text-gray-300 cursor-pointer" data-value="3"></i>
+              <i class="fas fa-star text-gray-300 cursor-pointer" data-value="4"></i>
+              <i class="fas fa-star text-gray-300 cursor-pointer" data-value="5"></i>
+            </div>
+            <input type="hidden" name="rating" value="0" required>
+          </div>
+          <button type="submit" class="w-full bg-accent text-white font-bold py-2 px-8 rounded-full text-base hover:bg-blue-700 transition-all">إرسال التقييم</button>
+        </form>
+        <div id="testimonialSuccess" class="text-green-600 text-center mt-3 hidden">تم إرسال تقييمك بنجاح!</div>
+      </div>
     </div>
 </section>
 
@@ -503,36 +508,189 @@
 </section>
 
 <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="py-16 bg-light-bg">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-4">
-      <h2 class="text-3xl md:text-4xl title-3d">تواصل معنا</h2>
+    <!-- العنوان -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold title-3d">تواصل معنا</h2>
     </div>
-    <div class="section-divider"></div>
-    <div class="card max-w-4xl mx-auto p-6 md:p-10">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- فاصل -->
+    <div class="section-divider mb-10"></div>
+
+    <!-- المحتوى -->
+    <div class="card max-w-4xl mx-auto p-6 md:p-10 bg-white dark:bg-gray-900 rounded-2xl shadow-lg">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+
+        <!-- نموذج التواصل -->
         <div>
           <h3 class="text-xl font-bold text-primary mb-4">أرسل رسالة مباشرة</h3>
-          <form action="https://formsubmit.co/ib.kohlane@gmail.com" method="POST">
-            <div class="mb-3"><input type="text" name="name" placeholder="الاسم الكامل" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></div>
-            <div class="mb-3"><input type="email" name="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></div>
-            <div class="mb-4"><textarea name="message" rows="4" placeholder="كيف يمكننا مساعدتك؟" class="w-full px-4 py-2 rounded-lg border text-sm focus:border-accent focus:outline-none" required></textarea></div>
-            <button type="submit" class="w-full bg-primary text-white font-bold py-2 px-8 rounded-full text-base hover:bg-secondary transition-all">إرسال الرسالة</button>
+          <form id="contactForm" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required 
+                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition" 
+                       placeholder="أدخل اسمك الكامل">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required 
+                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition" 
+                       placeholder="أدخل بريدك الإلكتروني">
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الموضوع</label>
+              <input type="text" id="subject" name="subject" required 
+                     class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition" 
+                     placeholder="أدخل موضوع الرسالة">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الرسالة</label>
+              <textarea id="message" name="message" rows="5" required 
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition" 
+                        placeholder="أدخل رسالتك هنا..."></textarea>
+            </div>
+
+            <!-- زر الإرسال -->
+            <div class="pt-2">
+              <button type="submit" id="submitBtn"
+                      class="w-full bg-accent text-white px-6 py-4 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center text-base md:text-lg disabled:opacity-50">
+                <span id="submitSpinner" class="hidden animate-spin mr-2 w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
+                <i class="fas fa-paper-plane ml-2"></i>
+                <span id="submitText">إرسال الرسالة</span>
+              </button>
+            </div>
+
+            <!-- رسالة التأكيد -->
+            <div id="formMessage" class="hidden text-center text-sm font-medium mt-4 p-3 rounded-lg transition-all duration-300"></div>
           </form>
         </div>
-        <div class="space-y-4">
+
+        <!-- معلومات التواصل -->
+        <div class="space-y-5">
           <h3 class="text-xl font-bold text-primary mb-4">أو تواصل عبر:</h3>
-          <a href="https://www.google.com/maps/search/?api=1&query=صنعاء+شارع+التلفزيون" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-map-marker-alt"></i></div><span class="mr-3 text-secondary group-hover:text-accent">صنعاء - شارع التلفزيون</span></a>
-          <a href="tel:+967777722014" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-phone"></i></div><span class="mr-3 text-secondary group-hover:text-accent" dir="ltr">+967 777 722 014</span></a>
-          <a href="mailto:ib.kohlane@gmail.com" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-envelope"></i></div><span class="mr-3 text-secondary group-hover:text-accent">ib.kohlane@gmail.com</span></a>
-          <a href="https://wa.me/967777722014" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-whatsapp"></i></div><span class="mr-3 text-secondary group-hover:text-accent">واتساب</span></a>
-          <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="flex items-center text-base group"><div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-facebook"></i></div><span class="mr-3 text-secondary group-hover:text-accent">فيسبوك</span></a>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=صنعاء+شارع+التلفزيون" target="_blank" class="flex items-center group">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-map-marker-alt"></i></div>
+            <span class="mr-3 text-secondary group-hover:text-accent">صنعاء - شارع التلفزيون</span>
+          </a>
+
+          <a href="tel:+967777722014" class="flex items-center group">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-phone"></i></div>
+            <span class="mr-3 text-secondary group-hover:text-accent" dir="ltr">+967 777 722 014</span>
+          </a>
+
+          <a href="mailto:ib.kohlane@gmail.com" class="flex items-center group">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fas fa-envelope"></i></div>
+            <span class="mr-3 text-secondary group-hover:text-accent">ib.kohlane@gmail.com</span>
+          </a>
+
+          <a href="https://wa.me/967777722014" target="_blank" class="flex items-center group">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-whatsapp"></i></div>
+            <span class="mr-3 text-secondary group-hover:text-accent">واتساب</span>
+          </a>
+
+          <a href="https://www.facebook.com/share/16h9AkRbW9/" target="_blank" class="flex items-center group">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent text-lg"><i class="fab fa-facebook"></i></div>
+            <span class="mr-3 text-secondary group-hover:text-accent">فيسبوك</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- صوت عند نجاح الإرسال -->
+<audio id="successSound" preload="auto">
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7850b4e097.mp3" type="audio/mpeg">
+</audio>
+
+<!-- سكربت إرسال النموذج -->
+<script>
+  const isArabic = document.documentElement.lang === 'ar' || document.documentElement.dir === 'rtl';
+  const form = document.getElementById('contactForm');
+  const messageBox = document.getElementById('formMessage');
+  const submitBtn = document.getElementById('submitBtn');
+  const submitText = document.getElementById('submitText');
+  const submitSpinner = document.getElementById('submitSpinner');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitSpinner.classList.remove('hidden');
+    submitText.textContent = isArabic ? "جاري الإرسال..." : "Sending...";
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+      _replyto: document.getElementById('email').value,
+      _template: "table"
+    };
+
+    fetch('https://formsubmit.co/ajax/ib.kohlane@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      showMessage(
+        isArabic 
+          ? `✅ شكراً ${formData.name}، تم إرسال رسالتك بنجاح.` 
+          : `✅ Thank you ${formData.name}, your message has been sent successfully.`,
+        'success'
+      );
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      showMessage(
+        isArabic 
+          ? '❌ حدث خطأ أثناء الإرسال! حاول مرة أخرى أو تواصل عبر واتساب.' 
+          : '❌ Sending failed! Please try again or contact via WhatsApp.',
+        'error'
+      );
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitSpinner.classList.add('hidden');
+      submitText.textContent = isArabic ? "إرسال الرسالة" : "Send Message";
+    });
+  });
+
+  function showMessage(text, type) {
+    messageBox.textContent = text;
+    messageBox.className = `text-center text-sm font-medium mt-4 p-3 rounded-lg ${
+      type === 'success' 
+        ? 'bg-green-100 text-green-800 border border-green-300' 
+        : 'bg-red-100 text-red-800 border border-red-300'
+    }`;
+    messageBox.classList.remove('hidden');
+
+    // صوت النجاح
+    if (type === 'success') {
+      const sound = document.getElementById('successSound');
+      if (sound) sound.play().catch(err => console.warn("لم يتم تشغيل الصوت:", err));
+    }
+
+    setTimeout(() => {
+      messageBox.classList.add('hidden');
+    }, 6000);
+  }
+</script>
+
+ 
 <!-- Footer -->
 <footer class="bg-primary text-white pt-12 pb-6">
   <div class="container mx-auto px-4 text-center">
@@ -586,6 +744,57 @@
             serviceCard.classList.toggle('open');
         });
     });
+
+  // نافذة إضافة تقييم
+  const addTestimonialBtn = document.getElementById('addTestimonialBtn');
+  const testimonialModal = document.getElementById('testimonialModal');
+  const closeTestimonialModal = document.getElementById('closeTestimonialModal');
+  const testimonialForm = document.getElementById('testimonialForm');
+  const testimonialSuccess = document.getElementById('testimonialSuccess');
+  const starRating = document.getElementById('starRating');
+  let selectedRating = 0;
+
+  addTestimonialBtn && addTestimonialBtn.addEventListener('click', () => {
+    testimonialModal.classList.remove('hidden');
+    testimonialSuccess.classList.add('hidden');
+    testimonialForm.reset();
+    selectedRating = 0;
+    updateStars();
+  });
+
+  closeTestimonialModal && closeTestimonialModal.addEventListener('click', () => {
+    testimonialModal.classList.add('hidden');
+  });
+
+  // إغلاق النافذة عند الضغط خارجها
+  testimonialModal && testimonialModal.addEventListener('click', (e) => {
+    if (e.target === testimonialModal) testimonialModal.classList.add('hidden');
+  });
+
+  // تقييم النجوم
+  function updateStars() {
+    if (!starRating) return;
+    Array.from(starRating.children).forEach((star, idx) => {
+      star.classList.toggle('text-gold', idx < selectedRating);
+      star.classList.toggle('text-gray-300', idx >= selectedRating);
+    });
+  }
+  starRating && Array.from(starRating.children).forEach(star => {
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.getAttribute('data-value'));
+      testimonialForm.rating.value = selectedRating;
+      updateStars();
+    });
+  });
+
+  // إرسال النموذج (بدون تخزين حقيقي، فقط رسالة نجاح)
+  testimonialForm && testimonialForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    testimonialSuccess.classList.remove('hidden');
+    setTimeout(() => {
+      testimonialModal.classList.add('hidden');
+    }, 1500);
+  });
 </script>
 <script>
   // إظهار الزر عند التمرير للأسفل
