@@ -203,6 +203,19 @@
     .faq-item.open .faq-icon {
       transform: rotate(180deg);
     }
+.title-3d {
+      color: #1e3a8a;
+      text-shadow: 1px 1px 0 #d1d5db, 2px 2px 0 #9ca3af;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .title-3d {
+        color: #ffffff;
+        text-shadow: 1px 1px 0 #374151, 2px 2px 0 #1f2937;
+      }
+    }
   </style>
 </head>
 
@@ -216,7 +229,9 @@
     <div class="flex justify-between h-16 items-center">
       <a href="#home" class="flex items-center">
         <i class="fas fa-balance-scale text-gold text-2xl ml-2"></i>
-        <span class="text-lg md:text-xl font-bold text-primary">مجموعة مكاتب الكحلاني</span>
+        <span class="text-lg md:text-xl font-bold text-primary">
+        
+        مجموعة مكاتب الكحلاني وشركاه</span>
       </a>
       <div class="hidden md:flex items-center space-x-reverse space-x-5">
         <a href="#home" class="text-sm text-secondary hover:text-accent transition-colors font-medium">الرئيسية</a>
@@ -240,37 +255,69 @@
     </div>
   </div>
 </nav>
-
- <!-- Hero Section -->
-<section id="home" class="pt-28 pb-16 md:pt-32 md:pb-20 bg-light-bg">
+<!-- Hero Section -->
+<section id="home" class="pt-28 pb-20 bg-light-bg">
   <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
 
-      <!-- النص -->
-      <div class="text-center md:text-right">
-        <h1 class="text-3xl md:text-4xl title-3d mb-4">مجموعة مكاتب الكحلاني</h1>
-        <h2 class="text-lg md:text-xl text-secondary font-medium mb-6">شريككم القانوني نحو تحقيق العدالة</h2>
-        <p class="text-sm md:text-base leading-relaxed mb-8">
-          نقدم لكم خبراتنا القانونية الواسعة وفريقًا من المحامين المتخصصين لضمان حقوقكم وحماية مصالحكم بكل احترافية وأمانة.
-        </p>
-        <a href="https://wa.me/967777722014?text=السلام%20عليكم،%20أرغب%20في%20طلب%20استشارة%20قانونية%20مجانية." target="_blank"
-           class="inline-block bg-accent text-white font-bold py-3 px-8 rounded-full text-base hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-          <i class="fab fa-whatsapp ml-2"></i> اطلب استشارة مجانية
-        </a>
-      </div>
-
-      <!-- الصورة بشكل دائري -->
-      <div class="flex justify-center">
-        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white">
+      <!-- الصورة -->
+      <div class="flex flex-col items-center text-center">
+        <div class="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white mb-4">
           <img src="img/presonal.jpg" alt="المستشار إبراهيم الكحلاني"
             class="w-full h-full object-cover object-top">
         </div>
+
+        <!-- تعريف المستشار -->
+        <div class="max-w-md text-center">
+          <h3 class="text-xl md:text-2xl title-3d mb-1 text-accent font-semibold">
+            المستشار إبراهيم الكحلاني
+          </h3>
+          <p class="text-sm md:text-base text-dark mb-4 font-medium">
+            رئيس مجموعة مكاتب الكحلاني للمحاماة
+          </p>
+             <h2 class="text-base md:text-lg text-secondary font-medium mb-4">
+          شريككم القانوني نحو تحقيق العدالة
+        </h2>
+ <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-6">
+          نقدم لكم خبراتنا القانونية الواسعة وفريقًا من المحامين المتخصصين لضمان حقوقكم وحماية مصالحكم بكل احترافية وأمانة.
+        </p>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-6">
+          تأسست <strong>مجموعة مكاتب الكحلاني للمحاماة</strong> على يد المستشار إبراهيم الكحلاني، بخبرة قانونية تتجاوز عشرين عاماً من التميز والعطاء، لتكون منارة عدل ومرجعاً قانونياً موثوقاً في الجمهورية اليمنية. منذ البداية، اعتمدت المجموعة على المهنية العالية، والشفافية، والدقة في تقديم الاستشارات والخدمات القانونية لكافة القطاعات والأفراد.
+        </p>
+
+        <!-- الرؤية -->
+        <div class="mb-5">
+          <h4 class="text-lg font-semibold text-primary mb-2 title-3d">الرؤية</h4>
+          <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+            أن نكون الخيار الأول والموثوق للعملاء في تقديم الحلول القانونية الشاملة، وأن نُسهم في ترسيخ مبادئ العدالة وسيادة القانون في المجتمع.
+          </p>
+        </div>
+
+        <!-- الرسالة -->
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold text-primary mb-2 title-3d">الرسالة</h4>
+          <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+            تقديم خدمات قانونية عالية الجودة تستند إلى الاحترافية والمعرفة العميقة بالقوانين المحلية والدولية، مع الحفاظ على قيم الأمانة، السرية، والالتزام التام بمصالح العملاء.
+          </p>
+                  <a href="https://wa.me/967777722014?text=السلام%20عليكم،%20أرغب%20في%20طلب%20استشارة%20قانونية%20مجانية." target="_blank"
+           class="inline-block bg-accent text-white font-bold py-3 px-8 rounded-full text-base hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <i class="fab fa-whatsapp ml-2"></i> اطلب استشارة مجانية
+        </a>
+        </div>
       </div>
 
+
+        <!-- زر واتساب -->
+
+      </div>
     </div>
   </div>
+
+
+  
+    
+  
 </section>
- 
  <!-- Services Section -->
 <section id="services" class="py-16 bg-white">
   <div class="container mx-auto px-4">
@@ -818,4 +865,4 @@
 </script>
 
 </body>
-</html>
+</html>مجموعة
