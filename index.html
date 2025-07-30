@@ -1,117 +1,201 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
- <!-- Meta Tags أساسية لتحسين الفهرسة -->
-<meta name="description" content="مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات القانونية - نخبة من المحامين المتخصصين في التقاضي، العقود، التحكيم، الشركات، القضايا العقارية وغيرها.">
-<meta name="keywords" content="محاماة, استشارات قانونية, قانون الشركات, العقود, المحامي الكحلاني, قضايا, محامي في اليمن, مكتب محاماة, القانون اليمني, التحكيم, المحاكم, محامون">
-<meta name="author" content="مجموعة مكاتب الكحلاني للمحاماة">
-<meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات</title>
 
-<!-- Open Graph لتنسيق المشاركة على فيسبوك وغيره -->
-<meta property="og:title" content="مجموعة مكاتب الكحلاني للمحاماة والاستشارات القانونية">
-<meta property="og:description" content="خدمات قانونية احترافية في كافة التخصصات - تقاضي، تحكيم، عقود، شركات، وأحوال شخصية.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://engah2.github.io/Al-Kahlani">
-<meta property="og:image" content="https://i.ibb.co/bF0ZSKG/alkahlani-edited.png">
+  <!-- Meta Tags أساسية لتحسين الفهرسة -->
+  <meta name="description" content="مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات القانونية - نخبة من المحامين المتخصصين في التقاضي، العقود، التحكيم، الشركات، القضايا العقارية وغيرها.">
+  <meta name="keywords" content="محاماة, استشارات قانونية, قانون الشركات, العقود, المحامي الكحلاني, قضايا, محامي في اليمن, مكتب محاماة, القانون اليمني, التحكيم, المحاكم, محامون">
+  <meta name="author" content="مجموعة مكاتب الكحلاني للمحاماة">
+  <meta name="robots" content="index, follow">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="مجموعة مكاتب الكحلاني للمحاماة">
-<meta name="twitter:description" content="خدمات قانونية متكاملة يقدمها نخبة من المحامين المتخصصين.">
-<meta name="twitter:image" content="https://i.ibb.co/bF0ZSKG/alkahlani-edited.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="مجموعة مكاتب الكحلاني للمحاماة والاستشارات القانونية">
+  <meta property="og:description" content="خدمات قانونية احترافية في كافة التخصصات - تقاضي، تحكيم، عقود، شركات، وأحوال شخصية.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://engah2.github.io/Al-Kahlani">
+  <meta property="og:image" content="https://i.ibb.co/bF0ZSKG/alkahlani-edited.png">
 
-<!-- Canonical (الرابط الرسمي) -->
-<link rel="canonical" href="https://engah2.github.io/Al-Kahlani" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مجموعة مكاتب الكحلاني للمحاماة">
+  <meta name="twitter:description" content="خدمات قانونية متكاملة يقدمها نخبة من المحامين المتخصصين.">
+  <meta name="twitter:image" content="https://i.ibb.co/bF0ZSKG/alkahlani-edited.png">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif']
-                    },
-                    colors: {
-                        'primary': '#14274E',
-                        'secondary': '#394867',
-                        'accent': '#0096FF',
-                        'gold': '#E1B12C',
-                        'light-bg': '#F1F6F9',
-                        'white': '#FFFFFF'
-                    }
-                }
-            }
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://engah2.github.io/Al-Kahlani" />
+
+  <!-- Structured Data (JSON-LD) لتحسين ظهور الموقع في Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "مجموعة مكاتب الكحلاني وشركاه للمحاماة والاستشارات القانونية",
+    "description": "نقدم خدمات قانونية في مختلف التخصصات مثل التقاضي، العقود، الشركات، التحكيم، والأحوال الشخصية.",
+    "url": "https://engah2.github.io/Al-Kahlani",
+    "logo": "https://i.ibb.co/bF0ZSKG/alkahlani-edited.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "YE",
+      "addressRegion": "صنعاء",
+      "addressLocality": "اليمن"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+967777722014",
+      "contactType": "Customer Service",
+      "areaServed": "YE",
+      "availableLanguage": ["ar"]
+    }
+  }
+  </script>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Cairo Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- إعدادات Tailwind مخصصة -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif']
+          },
+          colors: {
+            'primary': '#14274E',
+            'secondary': '#394867',
+            'accent': '#0096FF',
+            'gold': '#E1B12C',
+            'light-bg': '#F1F6F9',
+            'white': '#FFFFFF'
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--white ); color: var(--secondary); font-size: 15px; }
+  <!-- تنسيقات مخصصة -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--white); color: var(--secondary); font-size: 15px; }
 
-        .title-3d {
-            font-weight: 900;
-            color: #14274E;
-            letter-spacing: 0.5px;
-            text-shadow: 
-                1px 1px 0px #9BA4B4,
-                2px 2px 0px #9BA4B4,
-                3px 3px 5px rgba(0,0,0,0.1);
-        }
-        @media (max-width: 768px) {
-            .title-3d {
-                font-size: 2rem;
-                text-shadow: 
-                    1px 1px 0px #9BA4B4,
-                    2px 2px 2px rgba(0,0,0,0.1);
-            }
-        }
+    .title-3d {
+      font-weight: 900;
+      color: #14274E;
+      letter-spacing: 0.5px;
+      text-shadow:
+        1px 1px 0px #9BA4B4,
+        2px 2px 0px #9BA4B4,
+        3px 3px 5px rgba(0,0,0,0.1);
+    }
 
-        .section-divider {
-            height: 5px;
-            width: 100px;
-            background: #F1F6F9;
-            box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
-            border-radius: 4px;
-            margin: 2rem auto;
-        }
+    @media (max-width: 768px) {
+      .title-3d {
+        font-size: 2rem;
+        text-shadow:
+          1px 1px 0px #9BA4B4,
+          2px 2px 2px rgba(0,0,0,0.1);
+      }
+    }
 
-        .service-card {
-            background-color: #FFFFFF;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px -15px rgba(20,39,78,0.1);
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-        .service-header {
-            padding: 1.25rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .service-header:hover { background-color: #f1f6f9; }
-        .service-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.7s ease-in-out, padding 0.7s ease;
-            padding: 0 1.25rem;
-            border-top: 1px solid transparent;
-        }
-        .service-card.open .service-details {
-            max-height: 500px;
-            padding: 1.25rem;
-            border-top-color: #e5e7eb;
-        }
-        .service-icon-toggle { transition: transform 0.4s ease; margin-right: auto; }
-        .service-card.open .service-icon-toggle { transform: rotate(180deg); }
+    .section-divider {
+      height: 5px;
+      width: 100px;
+      background: #F1F6F9;
+      box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
+      border-radius: 4px;
+      margin: 2rem auto;
+    }
 
-        .faq-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem; }
-        .faq-question { cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 700; color: #14274E; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding-top 0.5s ease; padding-top: 0; }
-        .faq-item.open .faq-answer { max-height: 200px; padding-top: 1rem; }
-        .faq-icon { transition: transform 0.3s ease; }
-        .faq-item.open .faq-icon { transform: rotate(180deg); }
-    </style>
+    .service-card {
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px -15px rgba(20,39,78,0.1);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .service-header {
+      padding: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .service-header:hover { background-color: #f1f6f9; }
+
+    .service-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease-in-out, padding 0.7s ease;
+      padding: 0 1.25rem;
+      border-top: 1px solid transparent;
+    }
+
+    .service-card.open .service-details {
+      max-height: 500px;
+      padding: 1.25rem;
+      border-top-color: #e5e7eb;
+    }
+
+    .service-icon-toggle {
+      transition: transform 0.4s ease;
+      margin-right: auto;
+    }
+
+    .service-card.open .service-icon-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #14274E;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out, padding-top 0.5s ease;
+      padding-top: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-top: 1rem;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
 </head>
+
+
+
 <body class="font-sans">
 
 <!-- Navigation -->
