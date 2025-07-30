@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://engah2.github.io/Al-Kahlani/sitemap.xml
